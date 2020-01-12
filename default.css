@@ -6,7 +6,7 @@ body {
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "Didact Gothic", sans-serif;
+  font-family: "微軟正黑體", "Didact Gothic", sans-serif;
   font-size: 12pt;
   font-weight: 200;
 }
@@ -66,6 +66,15 @@ a:hover {
 #logo a {
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
+}
+
+/*********************************************************************************/
+/* Images                                                                        */
+/*********************************************************************************/
+
+img {
+  width: 350px;
+  margin-bottom: 0.8em;
 }
 
 /*********************************************************************************/
@@ -150,6 +159,7 @@ ul.contact li a.icon-rss:before {
 /*********************************************************************************/
 
 .title {
+  text-align: center;
   margin-bottom: 3em;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -161,7 +171,7 @@ ul.contact li a.icon-rss:before {
 
 .title .byline {
   font-size: 1.3em;
-  text-align: center;
+  margin-top: 1em;
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -179,13 +189,10 @@ ul.contact li a.icon-rss:before {
 /*********************************************************************************/
 
 .featurette-divider {
-  margin: 5rem 0;
+  margin: 4rem 0;
 }
 
-/* Thin out the marketing headings */
 .featurette-heading {
-  font-weight: 300;
-  line-height: 1;
   letter-spacing: -0.05rem;
 }
 
@@ -219,9 +226,19 @@ ul.contact li a.icon-rss:before {
   color: rgba(255, 255, 255, 0.8);
 }
 
-#menu li:hover a,
+/* #menu li:hover a,
 #menu li.active a,
 #menu li.active span {
+} */
+
+#menu a:hover {
+  color: #fff;
+  /* font-weight: bold; */
+  -webkit-transition: all 0.4s; /* safari/chrome */
+  -moz-transition: all 0.4s; /* firefox */
+  -ms-transition: all 0.4s; /* IE */
+  -o-transition: all 0.4s; /* opera */
+  transition: all 0.4s;
 }
 
 #menu .active a {
@@ -230,17 +247,12 @@ ul.contact li a.icon-rss:before {
   color: rgba(255, 255, 255, 1);
 }
 
-#menu .icon {
-}
+/* #menu .icon {
+} */
 
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/
-
-#banner {
-  padding-top: 14em;
-  text-align: center;
-}
 
 #banner .title {
   margin-bottom: 0em;
@@ -270,7 +282,7 @@ ul.contact li a.icon-rss:before {
 #header-wrapper {
   position: relative;
   padding: 5em 0em 10em 0em;
-  background: #111111 url(images/01.jpeg) no-repeat center;
+  background: #111111 url(images/street_01.jpeg) no-repeat center;
   background-size: cover;
 
   /* Create the parallax scrolling effect */
@@ -285,22 +297,68 @@ ul.contact li a.icon-rss:before {
   padding: 5em 0em;
 }
 
+#header-wrapper .title {
+  padding-top: 14em;
+}
+
+/*********************************************************************************/
+/* Parallex                                                                      */
+/*********************************************************************************/
+
+#parallex {
+  position: relative;
+  padding: 10em 0em 10em 0em;
+  background-size: cover;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  /* background-position-x: 30%; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.chara {
+  background: #111111 url(images/header.jpeg) no-repeat center;
+}
+
+.world {
+  background: #111111 url(images/street_03.jpeg) no-repeat center;
+}
+
 /*********************************************************************************/
 /* Content                                                                       */
 /*********************************************************************************/
 
-#content {
+.content {
   position: relative;
   padding: 7em 0em 7em 0em;
   text-align: center;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.8);
 }
 
-#content .fa {
+.content .fa {
   display: block;
   padding: 1em 0em;
   color: rgba(0, 0, 0, 1);
   font-size: 2em;
+}
+
+.content img .small {
+  width: 350px;
+}
+
+.content h2,
+h3 {
+  margin-top: 0.5em;
+  margin-bottom: 0.3em;
+}
+
+.flip {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 /*********************************************************************************/
@@ -310,7 +368,7 @@ ul.contact li a.icon-rss:before {
 #welcome {
   position: relative;
   padding: 7em 0em 7em 0em;
-  background: #111111 url(../images/header-bg.png) no-repeat center;
+  background: #111111;
   background-size: cover;
   text-align: center;
   color: #fff;
